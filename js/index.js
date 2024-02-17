@@ -17,7 +17,6 @@ const profileSide = document.querySelector("#profileSide");
                 }
                 form.classList.add("was-validated");
             },
-
             false
         );
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -33,34 +32,10 @@ const profileSide = document.querySelector("#profileSide");
                     if (!form.checkValidity()) {
                         event.preventDefault();
                         event.stopPropagation();
-                    } else if (form.checkValidity()) {
-                        addEventListener("submit", function (event) {
-                            event.preventDefault();
-                            window.location.href = "../html/profile.html";
-                        });
+                    } else {
                     }
-                    form.classList.add("was-validated");
                 });
             });
         })();
     });
 })();
-console.log("");
-
-//search
-
-const API_BASE_URL = "https://nf.api.onrender.com";
-
-async function registerUser(url, userData) {
-    console.log("url,userData");
-    try {
-    } catch (e) {}
-    const userToRegegister = {
-        name: `test-user`,
-        email: `test@example.com`,
-        password: `12341234qwe`,
-    };
-}
-
-const registerUrl = `${API_BASE_URL}/api/v1/social/auth/register`;
-registerUser(registerUrl, userToRegegister);

@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="dist/css/index.css" />
+        <script
+            type="module"
+            src="/js/AUTH/loginFU.mjs"
+            value="Person1"
+        ></script>
     </head>
     <body data-bs-theme="dark" class="m-0 p-0">
         <nav class="row w-100">
@@ -47,7 +52,6 @@
                         class="row g-0 needs-validation input-group d-flex align-items-center justify-content-center"
                         novalidate
                         id="loginForm"
-
                     >
                         <div class="position-relative mb-5">
                             <label for="validationTooltip0" class="form-label"
@@ -59,6 +63,7 @@
                                 id="validationTooltip0"
                                 placeholder="UserName"
                                 required
+                                value="persone1@noroff.no"
                             />
                             <div class="valid-tooltip">Looks good!</div>
                             <div class="invalid-tooltip">
@@ -77,6 +82,7 @@
                                 id="pswd"
                                 placeholder="Enter Password"
                                 required
+                                value="123123123Person1"
                             />
 
                             <div class="valid-tooltip">Looks good!</div>
@@ -85,7 +91,11 @@
                             </div>
                         </div>
                         <div class="text-center mt-5">
-                            <button class="btn text-brand" type="submit" action id="signInBtn">
+                            <button
+                                class="btn text-brand"
+                                type="submit"
+                                id="signInBtn"
+                            >
                                 Sign In
                             </button>
                         </div>

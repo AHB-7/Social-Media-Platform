@@ -9,6 +9,8 @@
             src="https://kit.fontawesome.com/c4f6dc2483.js"
             crossorigin="anonymous"
         ></script>
+        <script type="module" src="../js/AUTH/registerationFU.mjs"                                            value="Person1"
+        ></script>
     </head>
     <body data-bs-theme="dark" class="m-0 p-0">
         <nav class="row w-100">
@@ -34,6 +36,7 @@
                     <h2 class="text-capitalize text-center py-5">Sign Up</h2>
                     <form
                         class="row g-0 needs-validation input-group d-flex align-items-center justify-content-center"
+                        id="registerForm"
                         novalidate
                     >
                         <div
@@ -47,6 +50,7 @@
                                         <label
                                             for="validationTooltip01"
                                             class="form-label"
+                                            
                                             >First Name</label
                                         >
                                         <input
@@ -55,6 +59,7 @@
                                             id="validationTooltip01"
                                             placeholder="First Name"
                                             required
+                                            value="Person1"
                                         />
                                         <div class="valid-tooltip">
                                             Looks good!
@@ -75,6 +80,8 @@
                                             id="validationTooltip02"
                                             placeholder="Last Name"
                                             required
+                                            value="Person1"
+
                                         />
                                         <div class="valid-tooltip">
                                             Looks good!
@@ -145,6 +152,8 @@
                                 placeholder="Phone Number"
                                 aria-label="Number"
                                 required
+                                value="123123123"
+
                             />
                             <div class="valid-tooltip">Looks good!</div>
                             <div class="invalid-tooltip">
@@ -161,6 +170,7 @@
                                 id="validationTooltip04"
                                 placeholder="example@example.ex"
                                 required
+                                value="persone1@noroff.no"
                             />
                             <div class="valid-tooltip">Looks good!</div>
                             <div class="invalid-tooltip">
@@ -178,6 +188,7 @@
                                 id="pswd"
                                 placeholder="Enter Password"
                                 required
+                                value="123123123Person1"
                             />
                             <div class="valid-tooltip">Looks good!</div>
                             <div class="invalid-tooltip">
@@ -189,10 +200,11 @@
                                 class="form-check-input bg-dark"
                                 type="checkbox"
                                 value=""
+                                checked="checked";
                                 id="invalidCheck"
                                 required
                             />
-                            <label class="form-check-label" for="invalidCheck">
+                            <label class="form-check-label" for="invalidCheck" >
                                 Agree to terms and conditions
                             </label>
                             <div class="invalid-feedback">
@@ -203,7 +215,7 @@
                             <button
                                 class="btn text-brand"
                                 type="submit"
-                                id="profile"
+                                id="registerButton"
                             >
                                 Sign Up
                             </button>
