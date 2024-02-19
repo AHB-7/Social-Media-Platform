@@ -1,4 +1,4 @@
-import { dofetch } from "../fetc/fetch.mjs";
+import { dofetch } from "../fetch/fetch.mjs";
 import { addAuthToken } from "./authFuntionHanndling.mjs";
 import { LOGIN_URL } from "./constans.mjs";
 
@@ -15,7 +15,7 @@ export async function loginUser(email, password) {
         addAuthToken(accessToken);
         setTimeout(() => {
             window.location.href = "/html/feed.html";
-        }, 2000);
+        }, 1000);
     } else {
         // throw new console.error("something must been fixed");
     }

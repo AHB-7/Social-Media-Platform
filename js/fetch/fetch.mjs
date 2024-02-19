@@ -8,7 +8,6 @@ export async function dofetch(url, isAuth = false, options = {}) {
             headers["Authorization"] = `Bearer ${authToke}`;
         }
         const combainedOptions = { headers, ...options };
-        console.log(combainedOptions);
         const resposne = await fetch(url, combainedOptions);
         const json = await resposne.json();
         return json;

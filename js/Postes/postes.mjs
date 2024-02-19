@@ -1,17 +1,28 @@
-// 1. get postes
-
-import { dofetch } from "../fetc/fetch.mjs";
+import { dofetch } from "../fetch/fetch.mjs";
 import { POSTS_URL } from "../globleFolder/constans.mjs";
+import { postsInfo } from "./singlePost.mjs";
 
-// 2. display postes
 function displayPostes(posts) {
-    console.log(posts);
+    const postDiv = document.querySelector("#posts");
+
+    let postContent = "";
+
+    posts.forEach((post) => {
+        postContent += postsInfo(post);
+    });
+
+    postDiv.innerHTML = postContent;
 }
+
 async function getPostes() {
-    console.log("getPostes");
-    const posts = await dofetch(POSTS_URL, true);
-    if (posts) {
-        displayPostes(posts);
+    try {
+        const postWithAuthor = `${POSTS_URL}?_author=true`;
+        const posts = await dofetch(postWithAuthor, true);
+        if (posts) {
+            displayPostes(posts);
+        }
+    } catch (error) {
+        console.error("Failed to fetch posts or profiles", error);
     }
 }
 

@@ -1,4 +1,4 @@
-import { dofetch } from "../fetc/fetch.mjs";
+import { dofetch } from "../fetch/fetch.mjs";
 import { REGESTER_URL } from "./constans.mjs";
 
 export async function registerUser(
