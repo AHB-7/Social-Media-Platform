@@ -26,7 +26,6 @@ async function getPostes() {
     }
 }
 
-function main() {
+export function main() {
     getPostes();
 }
-main();
