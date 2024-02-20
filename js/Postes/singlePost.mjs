@@ -3,10 +3,7 @@ export function userProfile(post) {
     <div class="d-flex justify-content-between align-items-center py-2">
     <div class="container col-auto">
         <img
-            src="../assets/profileImg.jpg"
-            class="rounded-circle"
-            height="50"
-            alt=""
+        ${post.author.avatar || "no Images"}
         />
     </div>
     <div class="col lh-sm">
@@ -43,7 +40,7 @@ export function userProfile(post) {
              
     `;
 }
-export function postImg(post, profile) {
+export function postImg(post) {
     if (!post.media) {
         return "";
     }
@@ -51,7 +48,7 @@ export function postImg(post, profile) {
     <img src="${post.media}" class="card-img-centered" alt="post test" />
 `;
 }
-export function postContent(post, profile) {
+export function postContent(post) {
     return `
     <div class="card-body">
             <h5 class="card-title">${post.title}</h5>
@@ -59,7 +56,7 @@ export function postContent(post, profile) {
     </div>
 `;
 }
-export function postAction(post, profile) {
+export function postAction(post) {
     return `
     <div class="card-footer row m-0 p-0">
         <div class="btn-group p-0">
