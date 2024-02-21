@@ -1,12 +1,11 @@
 import { dofetch } from "../fetch/fetch.mjs";
-import { POSTS_URL } from "../globleFolder/constans.mjs";
+import { POSTS_URL, postLike } from "../globleFolder/constans.mjs";
 import { postsInfo } from "./singlePost.mjs";
 
 function displayPostes(posts) {
     const postDiv = document.querySelector("#posts");
 
     let postContent = "";
-
     posts.forEach((post) => {
         postContent += postsInfo(post);
     });

@@ -1,10 +1,10 @@
 export function userProfile(post) {
     return `
     <div class="d-flex justify-content-between align-items-center py-2">
-    <div class="container col-auto">
-        <img
-        ${post.author.avatar || "no Images"}
-        />
+    <div class="container col-auto" >
+            <img style="height:3rem; width:3rem;" src="${
+                post.author.avatar || "../../assets/profile-img.svg"
+            }" alt="Profile image" class="rounded-circle" height="50" />
     </div>
     <div class="col lh-sm">
         <h6 class="m-0">${post.author.name}</h6>
@@ -61,14 +61,13 @@ export function postAction(post) {
     <div class="card-footer row m-0 p-0">
         <div class="btn-group p-0">
             <button
-                type="button"
+                type="submit"
                 class="btn btn-post d-flex align-items-center justify-content-center"
+                id="post-like${post.id}"
             >
                 <i class="fa-solid fa-check-double"></i>
                 <span class="m-0">
-                ${
-                    post._count.reactions || "Be First"
-                } <span class="d-none d-lg-inline">Agreed</span>
+                ${post._count.reactions || "Be First"} 
                 </span>
             </button>
             <button
@@ -95,13 +94,13 @@ export function postAction(post) {
 `;
 }
 
-export function postsInfo(post, profile) {
+export function postsInfo(post) {
     return `<div class="col">
     <div class="card h-100">
-    ${userProfile(post, profile)}
-    ${postImg(post, profile)}
-    ${postContent(post, profile)}
-    ${postAction(post, profile)}
+    ${userProfile(post)}
+    ${postImg(post)}
+    ${postContent(post)}
+    ${postAction(post)}
     </div>
     </div>`;
 }
