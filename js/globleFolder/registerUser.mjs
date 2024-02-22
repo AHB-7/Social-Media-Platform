@@ -9,7 +9,8 @@ export async function registerUser(
     password,
     aggrement
 ) {
-    const selectedGender = gender ? "man" : "women" ? "women" : "other"; // Adjust based on actual form structure
+    const selectedGender =
+        gender === "man" ? "man" : gender === "women" ? "women" : "other";
     const isAgreementChecked = aggrement;
     await dofetch(REGESTER_URL, false, {
         method: "POST",

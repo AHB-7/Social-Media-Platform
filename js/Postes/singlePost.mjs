@@ -95,7 +95,7 @@ export function postAction(post) {
 }
 
 export function postsInfo(post) {
-    return `<div class="col">
+    return `<div class="col" id="${post.id}">
     <div class="card h-100">
     ${userProfile(post)}
     ${postImg(post)}

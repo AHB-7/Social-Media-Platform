@@ -1,5 +1,5 @@
 const likeBtn = document.getElementById("post-like${post.id}");
-console.log();
+console.log(likeBtn);
 
 export async function loginUser(email, password) {
     const response = await dofetch(LOGIN_URL, false, {

@@ -6,3 +6,4 @@ export const LOGIN_URL = `${BASE_URL}/social/auth/login`;
 export const POSTS_URL = `${BASE_URL}/social/posts`;
 export const PROFILE_URL = `${BASE_URL}/social/profiles`;
 export const postLike = document.getElementById(".post-like");
+export const postDiv = document.querySelector("#posts");
