@@ -6,7 +6,7 @@ export async function loginUser(email, password) {
     const response = await dofetch(LOGIN_URL, false, {
         method: "POST",
         body: JSON.stringify({
-            email: email,
+            email: email + "@noroff.no",
             password: password,
         }),
     });

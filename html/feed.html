@@ -10,6 +10,7 @@
             crossorigin="anonymous"
         ></script>
         <script type="module" src="../js/index.mjs"></script>
+        <script type="module" src="../js/actionFunctions/publish.mjs"></script>
     </head>
     <body class="m-0 p-0 bg-dark" data-bs-theme="dark">
         <header>
@@ -468,12 +469,13 @@
                 <section class="col-lg-8 col-md-7 col-12">
                     <form
                         class="form-floating pt-3 pt-md-0 needs-validation mb-3"
+                        id="publishForm"
                         novalidate
-                    >
+                    >   
                         <textarea
                             class="form-control bg-dark bg-avtive-glassy text-white pt-5"
                             placeholder="Write Something..."
-                            style="height: 200px"
+                            style="height: 250px"
                             maxlength="400"
                             minlength="1"
                             id="validationTooltip1"
@@ -511,6 +513,7 @@
 
                             <button
                                 id="controlBtn01"
+                                type="submit"
                                 class="btn btn-blenden d-flex align-items-center justify-content-center gap-2"
                             >
                                 <i class="fa-solid fa-paper-plane"></i>
@@ -521,122 +524,7 @@
                         </div>
                     </form>
                     <div class="row row-cols-1 g-4" id="posts">
-                        <!-- <div class="col">
-                            <div class="card h-100">
-                                <div
-                                    class="d-flex justify-content-between align-items-center py-2"
-                                >
-                                    <div class="container col-auto">
-                                        <img
-                                            src="../assets/profileImg.jpg"
-                                            class="rounded-circle"
-                                            height="50"
-                                            alt=""
-                                        />
-                                    </div>
-
-                                    <div class="col lh-sm">
-                                        <h6 class="m-0">Name Of the pster</h6>
-                                        <p class="text-muted m-0">
-                                            <i
-                                                class="fa-solid fa-calendar-days"
-                                            ></i>
-                                            12.2.2015
-                                        </p>
-                                    </div>
-                                    <div class="col-auto position-relative">
-                                        <div
-                                            class="dropdown-toggle d-flex position-absolute bottom-100 end-0 p-1 rounded-1 me-2 fs-4 text-dark"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                            role="button"
-                                        >
-                                            <small
-                                                class="text-body-secondary fs-6"
-                                            >
-                                            </small>
-                                        </div>
-                                        <ul
-                                            class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    href="#"
-                                                    >Dont show</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item text-danger"
-                                                    href="#"
-                                                >
-                                                    Report
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <img
-                                    src="https://cdn.vox-cdn.com/thumbor/iaRO8ZRmYP7vNgG5yPiBME1G1Wg=/0x0:3011x1447/1200x675/filters:focal(1123x329:1603x809)/cdn.vox-cdn.com/uploads/chorus_image/image/66954486/VALORANT_Jett_Red_crop.0.jpg"
-                                    class="card-img-centered"
-                                    alt="post test"
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">Game Name</h5>
-                                    <p class="card-text">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Tenetur, velit unde,
-                                        animi voluptate excepturi maiores alias
-                                        ratione ducimus nobis quo facilis
-                                        placeat suscipit sunt dolor porro culpa,
-                                        fugiat quod soluta.
-                                    </p>
-                                </div>
-                                <div class="card-footer row m-0 p-0">
-                                    <div class="btn-group p-0">
-                                        <button
-                                            type="button"
-                                            class="btn btn-post d-flex align-items-center justify-content-center"
-                                        >
-                                            <i
-                                                class="fa-solid fa-check-double"
-                                            ></i>
-                                            <span class="m-0">
-                                                120
-                                                <span class="d-none d-lg-inline"
-                                                    >Agreed</span
-                                                >
-                                            </span>
-                                        </button>
-                                        <button
-                                            type="button"
-                                            class="btn btn-post d-flex align-items-center justify-content-center gap-2"
-                                        >
-                                            <i class="fa-solid fa-comment"></i>
-                                            <span class="m-0">
-                                                12<span
-                                                    class="d-none d-lg-inline"
-                                                    >Comments</span
-                                                >
-                                            </span>
-                                        </button>
-                                        <button
-                                            type="button"
-                                            class="btn btn-post d-flex align-items-center justify-content-center gap-2"
-                                        >
-                                            <i
-                                                class="fa-solid fa-share-nodes"
-                                            ></i>
-                                            <span class="m-0">34</span>
-                                            <span class="d-none d-lg-inline"
-                                                >Shared</span
-                                            >
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                    
                     </div>
                 </section>
             </section>

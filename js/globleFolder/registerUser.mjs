@@ -18,7 +18,7 @@ export async function registerUser(
             name: fullName,
             gender: selectedGender,
             phoneNumber: phoneNumber,
-            email: email,
+            email: email + "@noroff.no",
             password: password,
             aggrement: isAgreementChecked,
         }),

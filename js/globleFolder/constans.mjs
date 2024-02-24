@@ -7,3 +7,5 @@ export const POSTS_URL = `${BASE_URL}/social/posts`;
 export const PROFILE_URL = `${BASE_URL}/social/profiles`;
 export const postLike = document.getElementById(".post-like");
 export const postDiv = document.querySelector("#posts");
+export const PUBLISH_URL = `${BASE_URL}/social/posts`;
+export const publishForm = document.getElementById("publishForm");

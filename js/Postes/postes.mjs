@@ -2,7 +2,7 @@ import { dofetch } from "../fetch/fetch.mjs";
 import { POSTS_URL, postDiv, postLike } from "../globleFolder/constans.mjs";
 import { postsInfo } from "./singlePost.mjs";
 
-function displayPostes(posts) {
+export function displayPostes(posts) {
     let postContent = "";
     posts.forEach((post) => {
         postContent += postsInfo(post);
@@ -10,9 +10,10 @@ function displayPostes(posts) {
 
     postDiv.innerHTML = postContent;
 }
+let globalPosts = [];
 
 const searchInput = document.getElementById("searchInput");
-let globalPosts = [];
+
 function displaySearch() {
     const inputValue = searchInput.value.toLowerCase();
     const filteredPosts = globalPosts.filter((post) =>
