@@ -24,7 +24,10 @@ publishForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const titleElement = document.getElementById("validationTooltip1");
     const title = titleElement.value;
-    const body = "Bodyyy";
-    await createPost(title, body, ["exampleTag"]);
+    const body = "";
+    const media =
+        "https://live.staticflickr.com/8446/7991872876_55cd9e7b25_n.jpg";
+    const tags = [];
+    await createPost(title, body, ["exampleTag"], media);
     console.log(title);
 });

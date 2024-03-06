@@ -1,4 +1,4 @@
-import { dofetch } from "../fetch/fetch.mjs";
+import { dofetch } from "../Functions/fetch.mjs";
 import { POSTS_URL, postDiv, postLike } from "../globleFolder/constans.mjs";
 import { postsInfo } from "./singlePost.mjs";
 
@@ -21,7 +21,7 @@ function displaySearch() {
     );
     displayPostes(filteredPosts);
 }
-searchInput.addEventListener("input", displaySearch);
+// searchInput.addEventListener("input", displaySearch);
 
 async function getPostes() {
     try {

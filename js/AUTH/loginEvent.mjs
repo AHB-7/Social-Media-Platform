@@ -1,9 +1,9 @@
-import { logInForm } from "../globleFolder/constans.mjs";
-import { loginUser } from "../globleFolder/logInUser.mjs";
+import { logInUser } from "../Functions/logInUser.mjs";
+import { loginForm } from "../globleFolder/constans.mjs";
 
-logInForm.addEventListener("submit", (event) => {
+loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const email = event.target[0].value;
     const password = event.target[1].value;
-    loginUser(email, password);
+    logInUser(email, password);
 });

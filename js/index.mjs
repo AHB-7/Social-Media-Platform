@@ -2,12 +2,10 @@ import { main } from "./Postes/postes.mjs";
 import { validator } from "./validation/validation.mjs";
 
 validator();
-if (
-    window.location.pathname !== "/html/signup.html" &&
-    window.location.pathname !== "/index.html"
-) {
-    main();
+if (window.location.pathname !== "/html/signup.html" && window.location.pathname !== "/index.html") {
+   main();
 }
+
 // function setupSearch(posts) {
 //     const searchInput = document.getElementById("searchInput");
 

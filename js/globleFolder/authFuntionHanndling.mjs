@@ -4,5 +4,5 @@ export const addAuthToken = (token) => {
 export const getAuthToken = () => {
     const accessToken = localStorage.getItem("Access-Token");
     return accessToken;
-    //
 };
+

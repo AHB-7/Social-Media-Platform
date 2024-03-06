@@ -44,25 +44,31 @@
                     class="col-12 col-md-6 rounded-3 bg-glassy border border-1"
                     style="max-width: 20rem"
                 >
-                    <h2 class="text-capitalize text-center py-5">Sign In</h2>
+                    <h2
+                        class="text-capitalize text-center py-5 control-input change-text"
+                    >
+                        Sign In
+                    </h2>
                     <form
                         class="row g-0 needs-validation input-group d-flex align-items-center justify-content-center"
                         novalidate
                         id="loginForm"
                     >
-                        <div class="position-relative mb-5">
+                        <div class="position-relative mb-3">
                             <label for="validationTooltip0" class="form-label"
                                 >UserName</label
                             >
                             <input
                                 type="text"
-                                class="form-control"
+                                class="form-control control-input"
                                 id="validationTooltip0"
                                 placeholder="UserName"
                                 required
                                 value="persone1"
                             />
-                            <div class="valid-tooltip">Looks good!</div>
+                            <div class="valid-tooltip">
+                                The pattern looks good!!
+                            </div>
                             <div class="invalid-tooltip">
                                 Please choose a valid username.
                             </div>
@@ -75,14 +81,16 @@
                                 autocomplete="off"
                                 minlength="8"
                                 type="password"
-                                class="form-control"
+                                class="form-control control-input"
                                 id="pswd"
                                 placeholder="Enter Password"
                                 required
                                 value="123123123Person1"
                             />
 
-                            <div class="valid-tooltip">Looks good!</div>
+                            <div class="valid-tooltip">
+                                The pattern looks good!
+                            </div>
                             <div class="invalid-tooltip">
                                 The password must be at least 8 characters
                             </div>
