@@ -6,7 +6,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="dist/css/index.css" />
         <script type="module" src="./js/index.mjs"></script>
-        <script type="module" src="./js/AUTH/loginEvent.mjs"></script>
+        <script type="module" src="./js/AUTH/signInEvent.mjs"></script>
     </head>
     <body data-bs-theme="dark" class="m-0 p-0">
         <nav class="row w-100">
@@ -45,12 +45,12 @@
                     style="max-width: 20rem"
                 >
                     <h2
-                        class="text-capitalize text-center py-5 control-input change-text"
+                        class="login-error text-capitalize text-center py-5 control-input change-text"
                     >
                         Sign In
                     </h2>
                     <form
-                        class="row g-0 needs-validation input-group d-flex align-items-center justify-content-center"
+                        class="needs-validation row g-0 input-group d-flex align-items-center justify-content-center"
                         novalidate
                         id="loginForm"
                     >
@@ -60,14 +60,14 @@
                             >
                             <input
                                 type="text"
-                                class="form-control control-input"
+                                class="form-control control-input invalid-input"
                                 id="validationTooltip0"
                                 placeholder="UserName"
                                 required
                                 value="persone1"
                             />
                             <div class="valid-tooltip">
-                                The pattern looks good!!
+                                The patern looks good!
                             </div>
                             <div class="invalid-tooltip">
                                 Please choose a valid username.
@@ -78,14 +78,13 @@
                                 >Password:</label
                             >
                             <input
-                                autocomplete="off"
+                                autocomplete="off "
                                 minlength="8"
                                 type="password"
-                                class="form-control control-input"
+                                class="form-control control-input invalid-input"
                                 id="pswd"
                                 placeholder="Enter Password"
                                 required
-                                value="123123123Person1"
                             />
 
                             <div class="valid-tooltip">

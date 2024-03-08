@@ -1,37 +1,29 @@
+import { registerUser } from "../Functions/sginUp.mjs";
 import { registerForm } from "../globleFolder/constans.mjs";
-import { registerUser } from "../Functions/registerUser.mjs";
-
-export function getSelectedGender() {
-    if (document.querySelector("#option5:checked")) {
-        return "man";
-    } else if (document.querySelector("#option6:checked")) {
-        return "women";
-    } else if (document.querySelector("#option8:checked")) {
-        return "other";
-    } else {
-        return null;
-    }
-}
-
-export function aggrement() {
-    if (document.querySelector("#invalidCheck:checked")) {
-        return "Aggred";
-    } else {
-        return null;
-    }
-}
+import {
+    aggrement,
+    checkNumber,
+    getSelectedGender,
+} from "../validation/validationFeed.mjs";
 
 registerForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const fullName = event.target[0].value;
     const gender = getSelectedGender();
-    const phoneNumber = event.target[4].value;
+    const phoneNumber = checkNumber();
     const email = event.target[5].value;
     const password = event.target[6].value;
     const agreementStatus = aggrement();
-    if (agreementStatus === null) {
+    if (
+        !agreementStatus ||
+        phoneNumber === null ||
+        email === "" ||
+        password === "" ||
+        fullName === ""
+    ) {
         return;
     }
+
     setTimeout(() => {
         registerUser(
             fullName,

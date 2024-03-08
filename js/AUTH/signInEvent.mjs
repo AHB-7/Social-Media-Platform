@@ -1,4 +1,4 @@
-import { logInUser } from "../Functions/logInUser.mjs";
+import { logInUser } from "../Functions/sginIn.mjs";
 import { loginForm } from "../globleFolder/constans.mjs";
 
 loginForm.addEventListener("submit", (event) => {

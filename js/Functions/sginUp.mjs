@@ -1,5 +1,15 @@
+import {
+    REGESTER_URL,
+    forms,
+    invalidInput,
+    wrongReg,
+} from "../globleFolder/constans.mjs";
+import {
+    toggleFormsValidation,
+    toggleInvalidInputs,
+    wrongInfo,
+} from "../validation/validationFeed.mjs";
 import { dofetch } from "./fetch.mjs";
-import { REGESTER_URL } from "../globleFolder/constans.mjs";
 
 export async function registerUser(
     fullName,
@@ -23,19 +33,17 @@ export async function registerUser(
         });
 
         if (regResponse && regResponse.id) {
+            toggleInvalidInputs(invalidInput, false);
+            toggleFormsValidation(forms, true);
             const userName = regResponse.email;
             localStorage.setItem("userName", userName);
             window.location.href = "/index.html";
         } else {
             if (regResponse.errors && regResponse.errors.length > 0) {
-                console.log(regResponse.errors[0].message);
-                const userNameInUse =
-                    document.querySelector(".user-name-inuse");
-                userNameInUse.style.color = "red";
-                userNameInUse.textContent = "This userName is already in use";
+                wrongInfo(wrongReg, `${regResponse.errors[0].message}`, "red");
+                toggleInvalidInputs(invalidInput, true);
+                toggleFormsValidation(forms, false);
             }
         }
-    } catch (error) {
-        console.error("An error occurred:", error);
-    }
+    } catch (error) {}
 }

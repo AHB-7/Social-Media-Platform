@@ -10,7 +10,7 @@
             crossorigin="anonymous"
         ></script>
         <script type="module" src="../js/index.mjs"></script>
-        <script type="module" src="../js/AUTH/SignUpEvent.mjs"></script>
+        <script type="module" src="../js/AUTH/signUpEvent.mjs"></script>
     </head>
     <body data-bs-theme="dark" class="m-0 p-0">
         <nav class="row w-100">
@@ -33,7 +33,9 @@
                     class="col-12 rounded-3 bg-glassy border border-1"
                     style="max-width: 40rem"
                 >
-                    <h2 class="text-capitalize text-center py-5">Sign Up</h2>
+                    <h2 class="text-capitalize text-center py-5 wrong-reg">
+                        Sign Up
+                    </h2>
                     <form
                         class="row g-0 needs-validation input-group d-flex align-items-center justify-content-center"
                         id="registerForm"
@@ -136,25 +138,27 @@
                                 Please enter a valid Phone Number
                             </div>
                         </div>
-                        <div class="position-relative">
-                            <label
-                                for="validationTooltip04"
-                                class="form-label user-name-inuse"
+                        <div class="position-relative" id="margenFortooltips">
+                            <label for="validationTooltip04" class="form-label"
                                 >Username</label
                             >
                             <input
                                 type="text"
-                                class="form-control"
+                                class="form-control control-input invalid-input"
                                 id="validationTooltip04"
                                 placeholder="example"
                                 pattern="[a-zA-Z0-9_]+$"
                                 required
                             />
-                            <div class="valid-tooltip">
-                                The patern looks good!
-                            </div>
+                            <div class="valid-tooltip">This looks good!</div>
                             <div class="invalid-tooltip">
-                                Username cannot contain unknown characters.
+                                <ul class="p-0 m-0 list-unstyled">
+                                    <li>
+                                        - Username cannot contain unknown
+                                        characters.
+                                    </li>
+                                    <li>- this username is already in use</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="position-relative">
