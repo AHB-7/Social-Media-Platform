@@ -58,6 +58,11 @@ export function toggleInvalidInputs(invalidInputs, isInvalid) {
 }
 
 // user name local storage
+
+export function sendToLocalStorage(key, responseValue) {
+    const value = responseValue;
+    localStorage.setItem(key, value);
+}
 export function emailCheck() {
     const email = localStorage.getItem("userName");
     if (email) {

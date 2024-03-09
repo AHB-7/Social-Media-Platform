@@ -1,8 +1,8 @@
 import { dofetch } from "../Functions/fetch.mjs";
-import { POSTS_URL, postDiv, postLike } from "../globleFolder/constans.mjs";
+import { POSTS_URL, postDiv, searchInput } from "../globleFolder/constans.mjs";
 import { postsInfo } from "./singlePost.mjs";
 
-export function displayPostes(posts) {
+function displayPostes(posts) {
     let postContent = "";
     posts.forEach((post) => {
         postContent += postsInfo(post);
@@ -10,9 +10,8 @@ export function displayPostes(posts) {
 
     postDiv.innerHTML = postContent;
 }
-let globalPosts = [];
 
-const searchInput = document.getElementById("searchInput");
+let globalPosts = [];
 
 function displaySearch() {
     const inputValue = searchInput.value.toLowerCase();
@@ -21,21 +20,19 @@ function displaySearch() {
     );
     displayPostes(filteredPosts);
 }
-// searchInput.addEventListener("input", displaySearch);
+searchInput.addEventListener("keyup", displaySearch);
 
 async function getPostes() {
     try {
         const postWithAuthor = `${POSTS_URL}?_author=true`;
         const posts = await dofetch(postWithAuthor, true);
         if (posts) {
-            globalPosts = posts;
-            displayPostes(posts);
+            globalPosts = await dofetch(postWithAuthor, true);
+            displayPostes(globalPosts);
         }
     } catch (error) {
         console.error("Failed to fetch posts or profiles", error);
     }
 }
 
-export function main() {
-    getPostes();
-}
+getPostes();

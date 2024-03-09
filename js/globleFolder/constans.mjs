@@ -14,3 +14,6 @@ export const whatWrong = document.querySelector(".login-error");
 export const wrongReg = document.querySelector(".wrong-reg");
 export const marginForTP = document.querySelector("#margenFortooltips");
 export const forms = document.querySelectorAll(".needs-validation");
+export const profileDiv = document.querySelector("#profileDiv");
+export const searchInput = document.getElementById("searchInput");
+export const userName = localStorage.getItem("userName");

@@ -10065,6 +10065,14 @@ textarea.form-control-lg {
   border-right: var(--bs-border-width) var(--bs-border-style) #00ff00;
 }
 
+* {
+  caret-color: transparent;
+}
+
+input {
+  caret-color: auto;
+}
+
 .link-icon {
   width: 2.6rem;
   height: 2.6rem;

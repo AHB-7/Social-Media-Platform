@@ -1,10 +1,13 @@
 import { registerUser } from "../Functions/sginUp.mjs";
 import { registerForm } from "../globleFolder/constans.mjs";
+import { validator } from "../validation/validation.mjs";
 import {
     aggrement,
     checkNumber,
     getSelectedGender,
 } from "../validation/validationFeed.mjs";
+
+validator();
 
 registerForm.addEventListener("submit", (event) => {
     event.preventDefault();

@@ -63,3 +63,9 @@
         border-right: var(--bs-border-width) var(--bs-border-style) $brand;
     }
 }
+* {
+    caret-color: transparent;
+}
+input {
+    caret-color: auto;
+}

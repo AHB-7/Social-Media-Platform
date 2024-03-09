@@ -5,6 +5,7 @@ import {
     wrongReg,
 } from "../globleFolder/constans.mjs";
 import {
+    sendToLocalStorage,
     toggleFormsValidation,
     toggleInvalidInputs,
     wrongInfo,
@@ -33,10 +34,10 @@ export async function registerUser(
         });
 
         if (regResponse && regResponse.id) {
+            console.log(regResponse.email);
             toggleInvalidInputs(invalidInput, false);
             toggleFormsValidation(forms, true);
-            const userName = regResponse.email;
-            localStorage.setItem("userName", userName);
+            sendToLocalStorage("userName", regResponse.email);
             window.location.href = "/index.html";
         } else {
             if (regResponse.errors && regResponse.errors.length > 0) {

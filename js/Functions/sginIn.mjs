@@ -7,6 +7,7 @@ import {
 } from "../globleFolder/constans.mjs";
 import {
     emailCheck,
+    sendToLocalStorage,
     toggleFormsValidation,
     toggleInvalidInputs,
     wrongInfo,
@@ -27,6 +28,7 @@ export async function logInUser(email, password) {
     const accessToken = response.accessToken;
 
     if (accessToken) {
+        sendToLocalStorage("userName", response.name);
         toggleInvalidInputs(invalidInput, false);
         toggleFormsValidation(forms, true);
         wrongInfo(whatWrong, `Every Thing Look Good`, "green");
