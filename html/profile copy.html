@@ -9,7 +9,6 @@
             src="https://kit.fontawesome.com/c4f6dc2483.js"
             crossorigin="anonymous"
         ></script>
-        <script type="module" src="../js/profile/profile.mjs"></script>
     </head>
     <body class="m-0 p-0 bg-dark" data-bs-theme="dark">
         <header>
@@ -167,12 +166,145 @@
                 </div>
             </nav>
         </header>
-        <main class="container pt-3 pt-sm-2" id="profileDiv">
-            <div
-                class="z-3 bg-black bg-opacity-25 container w-100 h-100 position-fixed d-flex align-items-center justify-content-center"
-                id="systemMsg"
-            ></div>
+        <main class="container pt-3 pt-sm-2">
+            <section class="row text-white">
+                <section class="col-md-6 col-12 col-lg-4">
+                    <div class="accordion bg-glassy">
+                        <div class="accordion-item bg-glassy">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#accordionBio"
+                                    aria-expanded="true"
+                                    aria-controls="accordionBio"
+                                >
+                                    About Me:
+                                </button>
+                            </h2>
+                            <div
+                                id="accordionBio"
+                                class="accordion-collapse collapse show"
+                            >
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <strong>Name : </strong>
+                                            TheBLaBLaMAn
+                                        </li>
+                                        <li>
+                                            <strong>Birth Day : </strong
+                                            >00/00/1000
+                                        </li>
+                                        <li><strong>From : </strong>Mars</li>
+                                        <li>
+                                            <strong>Peronal Link : </strong>
+                                            <a href="">www.mars.xcx</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-glassy">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#game-collapse"
+                                    aria-expanded="true"
+                                    aria-controls="game-collapse"
+                                >
+                                    Games Currently Playing
+                                </button>
+                            </h2>
+                            <div
+                                id="game-collapse"
+                                class="accordion-collapse collapse show"
+                            >
+                                <div class="accordion-body">
+                                    <div
+                                        class="d-flex align-items-center justify-content-start flex-row flex-wrap gap-1"
+                                    >
+                                        <div>
+                                            <img
+                                                src="../assets/games/fortnite.svg"
+                                                alt="fortnite"
+                                                class="w-game"
+                                            />
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="../assets/games/valorent.svg"
+                                                alt="valorent"
+                                                class="w-game"
+                                            />
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="../assets/games/gta.svg"
+                                                alt="gta"
+                                                class="w-game"
+                                            />
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="../assets/games/lol.svg"
+                                                alt="lol"
+                                                class="w-game"
+                                            />
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="../assets/games/csgo.svg"
+                                                alt="csgo"
+                                                class="w-game"
+                                            />
+                                        </div>
+                                        <div>
+                                            <img
+                                                src="../assets/games/sims.svg"
+                                                alt="sims"
+                                                class="w-game"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-glassy">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#information-accordion"
+                                    aria-expanded="true"
+                                    aria-controls="information-accordion"
+                                >
+                                    Bio
+                                </button>
+                            </h2>
+                            <div
+                                id="information-accordion"
+                                class="accordion-collapse collapse show"
+                            >
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Quis quas ad et natus
+                                    voluptate aut perferendis beatae quae,
+                                    delectus quod harum iusto ratione tempora
+                                    non suscipit consequatur in dolore labore?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
         </main>
+        <footer></footer>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/index.js"></script>
     </body>
 </html>
