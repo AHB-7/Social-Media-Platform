@@ -17,3 +17,4 @@ export const forms = document.querySelectorAll(".needs-validation");
 export const profileDiv = document.querySelector("#profileDiv");
 export const searchInput = document.getElementById("searchInput");
 export const userName = localStorage.getItem("userName");
+export const systemMessage = document.querySelector("#systemMessage");

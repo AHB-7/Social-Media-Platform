@@ -20,6 +20,7 @@ export function profileImg(profileRes) {
         />
     `;
 }
+
 export function pUserpImgCont(profileRes) {
     const backgroundImageUrl = profileRes.banner || "";
     return `
@@ -31,7 +32,7 @@ export function pUserpImgCont(profileRes) {
 
     `;
 }
-export function profileDropdown() {
+export function profileEdit() {
     return `
         <div
                 class="dropdown-toggle d-flex position-absolute top-0 end-0 p-1 rounded-1 m-2 fs-4"
@@ -54,9 +55,9 @@ export function profileCounter(profileRes) {
                     class="row row-cols-3 mt-4 w-100 col-7"
                 >
                     <div
-                        class="align-items-center justify-content-center d-flex flex-column"
+                        class="align-items-center justify-content-center d-flex flex-column "
                     >
-                        <div class="position-relative z-3">
+                        <div class="position-relative ">
                             <i
                                 class="fa-solid fa-paper-plane fs-4"
                             ></i>
@@ -75,7 +76,7 @@ export function profileCounter(profileRes) {
                     <div
                         class="align-items-center justify-content-center d-flex flex-column"
                     >
-                        <div class="position-relative z-3">
+                        <div class="position-relative  ">
                             <i
                                 class="fa-solid fa-user-group fs-4"
                             ></i>
@@ -92,7 +93,7 @@ export function profileCounter(profileRes) {
                         <p class="m-0 pt-1">following</p>
                     </div>
                     <div
-                        class="align-items-center justify-content-center d-flex flex-column z-3"
+                        class="align-items-center justify-content-center d-flex flex-column  "
                     >
                         <div class="position-relative">
                             <i
@@ -117,13 +118,151 @@ export function profileData(profileRes) {
     return `
     <div class="container w-100 p-0 bg-glassy py-2 px-1 mb-3">
     <div class="position-relative">
-        ${profileDropdown()}
+        ${profileEdit()}
         ${pUserpImgCont(profileRes)}
         ${profileCounter(profileRes)}  
     </div>
     </div>
 `;
 }
+export function profileInfo(profileRes) {
+    return `
+    <section class="row text-white">
+        <div class="accordion bg-glassy">
+        <div class="accordion-item bg-glassy">
+                <h2 class="accordion-header">
+                <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#accordionBio"
+                    aria-expanded="true"
+                    aria-controls="accordionBio"
+                >
+                    About Me:
+                </button>
+                </h2>
+            <div
+                id="accordionBio"
+                class="accordion-collapse collapse show"
+            >
+                <div class="accordion-body">
+                    <ul class="list-unstyled">
+                        <li>
+                            <strong>Name : </strong>
+                            ${profileRes.name}
+                        </li>
+                        <li>
+                            <strong>Birth Day :  ${profileRes.tag}
+                        </li>
+                        <li><strong>From : </strong> ${profileRes.name}</li>
+                        <li>
+                            <strong>Peronal Link : </strong>
+                            <a href="">www.mars.xcx</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item bg-glassy">
+        <h2 class="accordion-header">
+            <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#game-collapse"
+                aria-expanded="true"
+                aria-controls="game-collapse"
+            >
+                Games Currently Playing
+            </button>
+        </h2>
+        <div
+            id="game-collapse"
+            class="accordion-collapse collapse show"
+        >
+            <div class="accordion-body">
+                <div
+                    class="d-flex align-items-center justify-content-start flex-row flex-wrap gap-1"
+                >
+                    <div>
+                        <img
+                            src="../assets/games/fortnite.svg"
+                            alt="fortnite"
+                            class="w-game"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="../assets/games/valorent.svg"
+                            alt="valorent"
+                            class="w-game"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="../assets/games/gta.svg"
+                            alt="gta"
+                            class="w-game"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="../assets/games/lol.svg"
+                            alt="lol"
+                            class="w-game"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="../assets/games/csgo.svg"
+                            alt="csgo"
+                            class="w-game"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="../assets/games/sims.svg"
+                            alt="sims"
+                            class="w-game"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item bg-glassy">
+        <h2 class="accordion-header">
+            <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#information-accordion"
+                aria-expanded="true"
+                aria-controls="information-accordion"
+            >
+                Bio
+            </button>
+        </h2>
+        <div
+            id="information-accordion"
+            class="accordion-collapse collapse show"
+        >
+            <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quis quas ad et natus
+                voluptate aut perferendis beatae quae, delectus
+                quod harum iusto ratione tempora non suscipit
+                consequatur in dolore labore?
+            </div>
+        </div>
+    </div>
+        </div>
+    </section>
+    
+    `;
+}
+
 /*
                     <form
                         class="form-floating pt-3 pt-md-0 needs-validation"
@@ -549,13 +688,13 @@ export function displayProfileContent(profileRes) {
     return `
     <section class="row text-white">
 
-        <section class="col-lg-4 col-md-6 col-sm-6 col-12">
+        <section class="col-xl-5 col-lg-6 col-12">
 
             ${profileData(profileRes)}
-
+            ${profileInfo(profileRes)}
         </section>   
 
-        <section class="col-lg-8 col-md-6 col-sm-6 col-12">
+        <section class="col-xl-7 col-lg-6 col-12">
 
         </section>
     </section>

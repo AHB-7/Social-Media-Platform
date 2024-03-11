@@ -11,7 +11,7 @@
         ></script>
         <script type="module" src="../js/profile/profile.mjs"></script>
     </head>
-    <body class="m-0 p-0 bg-dark" data-bs-theme="dark">
+    <body class="m-0 p-0 bg-dark" data-bs-theme="dark" id="mainContainer">
         <header>
             <nav class="navbar navbar-expand-md bg-body-tertiary">
                 <div class="container">
@@ -167,12 +167,12 @@
                 </div>
             </nav>
         </header>
-        <main class="container pt-3 pt-sm-2" id="profileDiv">
-            <div
-                class="z-3 bg-black bg-opacity-25 container w-100 h-100 position-fixed d-flex align-items-center justify-content-center"
-                id="systemMsg"
-            ></div>
-        </main>
+        <main class="container pt-3 pt-sm-2" id="profileDiv"></main>
+
+        <div
+            class="bg-black visually-hidden bg-opacity-25 container mw-100 h-100 position-absolute top-0 d-flex align-items-center justify-content-center"
+            id="systemMessage"
+        ></div>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
