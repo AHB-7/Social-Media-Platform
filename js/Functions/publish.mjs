@@ -24,12 +24,15 @@ export async function createPost(title, body, tags = [], media = "") {
 
 publishForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const titleElement = document.getElementById("validationTooltip1");
+
+    const titleElement = document.getElementById("title");
+    const bodyElement = document.getElementById("validationTooltip1");
     const title = titleElement.value;
     const tagebeenSelceted = localStorage.getItem("selectedTagOC");
-    const body = "";
-    const media = "";
-    const tags = [tagebeenSelceted];
+    const body = bodyElement.value;
+    const addImgButton = document.getElementById("imgainput");
+    const media = addImgButton.value;
+    const tags = [tagebeenSelceted || ""];
     await createPost(title, body, tags, media);
     await getPostes();
 });

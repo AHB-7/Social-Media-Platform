@@ -1,7 +1,10 @@
+import { delet, deletPost } from "../Functions/delet.mjs";
 import { dofetch } from "../Functions/fetch.mjs";
 import { createPost } from "../Functions/publish.mjs";
 import { POSTS_URL, postDiv, searchInput } from "../globleFolder/constans.mjs";
+import { validator } from "../validation/validation.mjs";
 import { postsInfo } from "./singlePost.mjs";
+import { selectTags } from "./tags.mjs";
 
 function displayPostes(posts) {
     let postContent = "";
@@ -30,9 +33,21 @@ export async function getPostes() {
         if (posts) {
             globalPosts = await dofetch(postWithAuthor, true);
             displayPostes(globalPosts);
+            delet();
         }
     } catch (error) {
         console.error("Failed to fetch posts or profiles", error);
     }
 }
+
 getPostes();
+selectTags();
+const textarea = document.getElementById("validationTooltip1");
+textarea.addEventListener("input", autoResize, false);
+
+function autoResize() {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+}
+
+validator();

@@ -1,11 +1,29 @@
+import { gameImages } from "../globleFolder/constans.mjs";
+
+export function tagImg(post) {
+    return gameImages[post.tags] || "";
+}
+export function checkIfTag(post) {
+    if (`${tagImg(post)}` === "") {
+        return ``
+    } else {
+        return `  
+        <img
+            src="${tagImg(post)}"
+            class="position-absolute end-0 p-1 gameIcon"
+        >     
+        </img>`;
+    }
+}
 export function userProfile(post) {
     return `
-    <div class="d-flex justify-content-between align-items-center py-2">
+    <div class="d-flex justify-content-between align-items-center py-2 ">
     <div class="container col-auto" >
             <img style="height:3rem; width:3rem;" src="${
                 post.author.avatar || "../../assets/profile-img.svg"
-            }" alt="Profile image" class="rounded-circle" height="50" />
+            }" alt="Profile image" class="rounded-circle" />
     </div>
+    ${checkIfTag(post)}
     <div class="col lh-sm">
         <h6 class="m-0">${post.author.name}</h6>
         <p class="text-muted m-0">
@@ -23,15 +41,17 @@ export function userProfile(post) {
         >
             <small class="text-body-secondary fs-6"></small>
         </div>
-        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end px-0 pb-0 " >
             <li>
-                <a class="dropdown-item" href="#">
-                    Don't show
+                <a class="dropdown-item" href="#" >
+                    Edit
                 </a>
             </li>
             <li>
-                <a class="dropdown-item text-danger" href="#">
-                    Report
+                <a class="dropdown-item text-danger deletBtn" data-post-id="${
+                    post.id
+                }" href="#">
+                    Delete
                 </a>
             </li>
         </ul>
@@ -93,16 +113,13 @@ export function postAction(post) {
     </div>  
 `;
 }
-
+//
 export function postsInfo(post) {
-    return `<div class="col" id="${post.id}">
+    return `<div class="col" >
     <div class="card h-100">
     ${userProfile(post)}
     ${postImg(post)}
     ${postContent(post)}
-    <div syle="width:10rem; height:10rem;">
-    ${post.Tags}
-    </div>
     ${postAction(post)}
     </div>
     </div>`;

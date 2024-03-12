@@ -405,7 +405,7 @@
                                                 class="d-flex align-items-center justify-content-center"
                                             >
                                                 <img
-                                                    src="../assets/g/c.svg"
+                                                    src="../assets/g/GTA.svg"
                                                     alt="game Image"
                                                     height="30"
                                                 />
@@ -428,7 +428,7 @@
                                                 class="d-flex align-items-center justify-content-center"
                                             >
                                                 <img
-                                                    src="../assets/g/l.svg"
+                                                    src="../assets/g/counter_strike_image.svg"
                                                     alt="game Image"
                                                     height="30"
                                                 />
@@ -450,7 +450,7 @@
                                                 class="d-flex align-items-center justify-content-center"
                                             >
                                                 <img
-                                                    src="../assets/g/f.svg"
+                                                    src="../assets/g/Fortnite.svg"
                                                     alt="game Image"
                                                     height="30"
                                                 />
@@ -467,42 +467,76 @@
                 </section>
                 <section class="col-lg-8 col-md-7 col-12">
                     <form
-                        class="form-floating pt-3 pt-md-0 needs-validation mb-3"
+                        class="pt-md-0 needs-validation mb-3"
                         id="publishForm"
-                        novalidate
                     >
-                        <textarea
-                            class="form-control bg-dark bg-avtive-glassy text-white pt-4"
-                            placeholder="Write Something..."
-                            style="height: 250px"
-                            maxlength="400"
-                            minlength="1"
-                            id="validationTooltip1"
-                            required
-                        ></textarea>
-                        <label
-                            for="validationTooltip1"
-                            class="mb-1"
-                            style="font-size: 0.8rem"
-                            >Write Something...
-                        </label>
-                        <div class="invalid-tooltip top-0 mt-4 mt-md-2 end-0">
-                            Please write something!!
+                        <div class="form-floating">
+                            <input
+                                class="form-control bg-dark bg-avtive-glassy text-white mt-2 fs-3 text-decoration-underline"
+                                placeholder="Title"
+                                style="height: auto"
+                                maxlength="230"
+                                minlength="1"
+                                id="title"
+                                required
+                            />
+                            <label for="title ">Title</label>
+                            <div
+                                class="invalid-tooltip top-0 mt-4 mt-md-2 end-0"
+                            >
+                                Please write something!!
+                            </div>
+                        </div>
+                        <div class="form-floating">
+                            <textarea
+                                class="form-control bg-dark bg-avtive-glassy border-top-0 text-white py-0 ps-4"
+                                placeholder="Write Something..."
+                                style="height: auto"
+                                contenteditable="true"
+                                maxlength="360"
+                                minlength="1"
+                                id="validationTooltip1"
+                                required
+                            ></textarea>
+                            <label
+                                for="validationTooltip1 visually-hidden"
+                            ></label>
+                            <div
+                                class="invalid-tooltip top-0 mt-4 mt-md-2 end-0"
+                            >
+                                There must be a content here!
+                            </div>
                         </div>
                         <div
-                            class="btn-group position-absolute bottom-0 w-100 bg-glassy"
+                            class="btn-group bottom-0 w-100 bg-glassy"
                             role="group"
                             aria-label="Basic mixed styles"
                         >
                             <button
                                 type="button"
                                 class="btn btn-blenden d-flex align-items-center justify-content-center gap-2"
+                                id="addImgButton"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#imgainputCollapse"
+                                aria-expanded="false"
+                                aria-controls="imgainputCollapse"
                             >
-                                <i class="fa-solid fa-video"></i>
+                                <i class="fa-solid fa-image"></i>
                                 <span class="m-0 d-none d-lg-inline"
-                                    >Stream</span
+                                    >Image</span
                                 >
                             </button>
+                            <div
+                                class="collapse position-relative"
+                                id="imgainputCollapse"
+                            >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="imgainput"
+                                />
+                            </div>
                             <div class="dropdown">
                                 <button
                                     type="button"
@@ -515,37 +549,33 @@
                                 </button>
                                 <ul
                                     class="dropdown-menu"
+                                    id="gameListTags"
                                     aria-labelledby="dropdownMenuButton"
                                 >
                                     <li>
-                                        <a class="dropdown-item" href="#"
-                                            >clear</a
-                                        >
+                                        <a class="dropdown-item">clear</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#"
+                                        <a class="dropdown-item"
                                             >Counter Strike</a
                                         >
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#"
-                                            >Fortnie</a
-                                        >
+                                        <a class="dropdown-item">Fortnite</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#"
+                                        <a class="dropdown-item"
                                             >League of Legends</a
                                         >
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#"
-                                            >Sims 4</a
-                                        >
+                                        <a class="dropdown-item">Sims 4</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#"
-                                            >Valorent</a
-                                        >
+                                        <a class="dropdown-item">GTA</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item">Valorent</a>
                                     </li>
                                 </ul>
                             </div>

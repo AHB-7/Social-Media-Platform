@@ -20,3 +20,12 @@ export const userName = localStorage.getItem("userName");
 export const systemMessage = document.querySelector("#systemMessage");
 export const tagToUse = document.querySelectorAll(".dropdown-item");
 export const dropdownTagsBtn = document.getElementById("dropdownMenuButton");
+export const gameImages = {
+    "Counter Strike": "../../assets/g/counter_strike_image.svg",
+    Fortnite: "../../assets/g/Fortnite.svg",
+    "League of Legends": "../../assets/g/league_of_legends_image.svg",
+    "Sims 4": "../../assets/g/sims_4_image.svg",
+    Valorent: "../../assets/g/valorent_image.svg",
+    GTA: "../../assets/g/GTA.svg",
+    clear: "",
+};
