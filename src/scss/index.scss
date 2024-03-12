@@ -3,7 +3,6 @@
 @import "../../node_modules/bootstrap/scss/variables-dark";
 @import "variables";
 @import "variables+dark";
-
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/utilities";
@@ -13,3 +12,4 @@
 @import "additional";
 @import "nav";
 @import "buttons";
+@import "tags.scss";

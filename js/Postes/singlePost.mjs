@@ -100,6 +100,9 @@ export function postsInfo(post) {
     ${userProfile(post)}
     ${postImg(post)}
     ${postContent(post)}
+    <div syle="width:10rem; height:10rem;">
+    ${post.Tags}
+    </div>
     ${postAction(post)}
     </div>
     </div>`;

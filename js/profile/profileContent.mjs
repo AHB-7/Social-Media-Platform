@@ -187,42 +187,42 @@ export function profileInfo(profileRes) {
                 >
                     <div>
                         <img
-                            src="../assets/games/fortnite.svg"
+                            src="../assets/g/f.svg"
                             alt="fortnite"
                             class="w-game"
                         />
                     </div>
                     <div>
                         <img
-                            src="../assets/games/valorent.svg"
+                            src="../assets/g/v.svg"
                             alt="valorent"
                             class="w-game"
                         />
                     </div>
                     <div>
                         <img
-                            src="../assets/games/gta.svg"
+                            src="../assets/g/g.svg"
                             alt="gta"
                             class="w-game"
                         />
                     </div>
                     <div>
                         <img
-                            src="../assets/games/lol.svg"
+                            src="../assets/g/l.svg"
                             alt="lol"
                             class="w-game"
                         />
                     </div>
                     <div>
                         <img
-                            src="../assets/games/csgo.svg"
+                            src="../assets/g/c.svg"
                             alt="csgo"
                             class="w-game"
                         />
                     </div>
                     <div>
                         <img
-                            src="../assets/games/sims.svg"
+                            src="../assets/g/s.svg"
                             alt="sims"
                             class="w-game"
                         />

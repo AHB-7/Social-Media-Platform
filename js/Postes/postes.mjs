@@ -1,4 +1,5 @@
 import { dofetch } from "../Functions/fetch.mjs";
+import { createPost } from "../Functions/publish.mjs";
 import { POSTS_URL, postDiv, searchInput } from "../globleFolder/constans.mjs";
 import { postsInfo } from "./singlePost.mjs";
 
@@ -22,7 +23,7 @@ function displaySearch() {
 }
 searchInput.addEventListener("keyup", displaySearch);
 
-async function getPostes() {
+export async function getPostes() {
     try {
         const postWithAuthor = `${POSTS_URL}?_author=true`;
         const posts = await dofetch(postWithAuthor, true);
@@ -34,5 +35,5 @@ async function getPostes() {
         console.error("Failed to fetch posts or profiles", error);
     }
 }
-
 getPostes();
+
