@@ -18,3 +18,5 @@ export const profileDiv = document.querySelector("#profileDiv");
 export const searchInput = document.getElementById("searchInput");
 export const userName = localStorage.getItem("userName");
 export const systemMessage = document.querySelector("#systemMessage");
+export const tagToUse = document.querySelectorAll(".dropdown-item");
+export const dropdownTagsBtn = document.getElementById("dropdownMenuButton");

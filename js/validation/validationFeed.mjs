@@ -57,11 +57,15 @@ export function toggleInvalidInputs(invalidInputs, isInvalid) {
     });
 }
 
-// user name local storage
+//local storage
 
 export function sendToLocalStorage(key, responseValue) {
     const value = responseValue;
     localStorage.setItem(key, value);
+}
+
+export function getFromLocalStorage(key) {
+    return localStorage.getItem(key);
 }
 export function emailCheck() {
     const email = localStorage.getItem("userName");

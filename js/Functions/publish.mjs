@@ -26,12 +26,10 @@ publishForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const titleElement = document.getElementById("validationTooltip1");
     const title = titleElement.value;
+    const tagebeenSelceted = localStorage.getItem("selectedTagOC");
     const body = "";
     const media = "";
-    const lol = document.querySelector(".l");
-    const tags = [lol.outerHTML];
+    const tags = [tagebeenSelceted];
     await createPost(title, body, tags, media);
     await getPostes();
 });
-
-// console.log(tags);
