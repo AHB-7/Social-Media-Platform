@@ -23,10 +23,9 @@ export function profileImg(profileRes) {
 }
 
 export function pUserpImgCont(profileRes) {
-    const backgroundImageUrl = profileRes.banner || "";
     return `
     <div class="d-flex alingn-items-center justify-content-center flex-column rounded-1"
-    style="background-image: url('${backgroundImageUrl}');">
+    style="background-image: url(' ${profileRes.banner || ""}')">
     ${profileImg(profileRes)}
     <h1 class="text-center mt-2">${profileRes.name}</h1>
     </div>
