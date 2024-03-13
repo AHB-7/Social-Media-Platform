@@ -10065,6 +10065,15 @@ textarea.form-control-lg {
   border-right: var(--bs-border-width) var(--bs-border-style) #00ff00;
 }
 
+* {
+  caret-color: transparent;
+}
+
+input,
+textarea {
+  caret-color: auto;
+}
+
 .link-icon {
   width: 2.6rem;
   height: 2.6rem;
@@ -10117,6 +10126,14 @@ textarea.form-control-lg {
 .btn-dropdown:focus {
   background-color: #00ff00;
   color: #000;
+}
+
+.gameIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  bottom: 2.7rem;
+  right: 0.5rem;
 }
 
 /*# sourceMappingURL=index.css.map */
