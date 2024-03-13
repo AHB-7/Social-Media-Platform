@@ -11,7 +11,6 @@ export async function deletPost(url) {
     if (response) {
         getPostes();
     } else {
-        console.log("Failed to create post");
     }
 }
 

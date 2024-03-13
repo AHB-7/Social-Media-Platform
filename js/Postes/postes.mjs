@@ -11,6 +11,7 @@ import { validator } from "../validation/validation.mjs";
 import { postImageToView } from "../validation/postValidation.mjs";
 import { postsInfo } from "./singlePost.mjs";
 import { selectTags } from "./tags.mjs";
+import { createAndShowAlert } from "../validation/alert.mjs";
 let globalPosts = [];
 
 export function displayPostes(posts) {
@@ -42,7 +43,7 @@ export async function getPostes() {
             delet();
         }
     } catch (error) {
-        console.error("Failed to fetch posts or profiles", error);
+        createAndShowAlert();
     }
 }
 export async function main() {

@@ -12,6 +12,7 @@ import {
     systemMessage,
     userName,
 } from "../globleFolder/constans.mjs";
+import { createAndShowAlert } from "../validation/alert.mjs";
 import { getProfile } from "./profile.mjs";
 import { editProfileContainer } from "./updateMediaContainer.mjs";
 
@@ -39,7 +40,7 @@ export async function updateUserProfile(url, userData) {
             body: JSON.stringify(userData),
         });
     } catch (error) {
-        console.error("Could not update profile:", error);
+        createAndShowAlert();
     }
 }
 
@@ -73,5 +74,7 @@ export async function mediaInUse(mediaRes) {
 
         const closeBtn = document.querySelector("#closeBtn");
         toggleSysMsg(closeBtn, systemMessage);
-    } catch (error) {}
+    } catch (error) {
+        createAndShowAlert();
+    }
 }

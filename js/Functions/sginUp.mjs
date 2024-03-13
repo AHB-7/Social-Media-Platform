@@ -4,6 +4,7 @@ import {
     invalidInput,
     wrongReg,
 } from "../globleFolder/constans.mjs";
+import { createAndShowAlert } from "../validation/alert.mjs";
 import {
     sendToLocalStorage,
     toggleFormsValidation,
@@ -46,5 +47,7 @@ export async function registerUser(
                 toggleFormsValidation(forms, false);
             }
         }
-    } catch (error) {}
+    } catch (error) {
+        createAndShowAlert();
+    }
 }

@@ -1,4 +1,5 @@
 import { getAuthToken } from "../globleFolder/authFuntionHanndling.mjs";
+import { createAndShowAlert } from "../validation/alert.mjs";
 
 /**
  * Performs an HTTP request to a specified URL with optional authentication and custom options.
@@ -43,6 +44,6 @@ export async function dofetch(url, isAuth = false, options = {}) {
         const json = await response.json();
         return json;
     } catch (e) {
-        throw Error();
+        createAndShowAlert();
     }
 }

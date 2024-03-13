@@ -5,6 +5,7 @@ import {
     profileDiv,
     systemMessage,
 } from "../globleFolder/constans.mjs";
+import { createAndShowAlert } from "../validation/alert.mjs";
 import { displayProfileContent } from "./profileContent.mjs";
 import { mediaInUse } from "./updateProfile.mjs";
 
@@ -31,7 +32,7 @@ export async function getProfile() {
             const mediaBtn = document.querySelector(".media-btn");
             toggleSysMsg(mediaBtn, systemMessage);
         } catch (error) {
-            console.error("Failed to fetch posts or profiles", error);
+            createAndShowAlert();
         }
     }
 }
