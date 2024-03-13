@@ -15,6 +15,18 @@ import {
 import { getProfile } from "./profile.mjs";
 import { editProfileContainer } from "./updateMediaContainer.mjs";
 
+/**
+ * Asynchronously updates a user's profile on the server by sending a PUT request.
+ * This function assumes the presence of a `dofetch` utility function and a `getAuthToken` function
+ * for making the HTTP request and retrieving the authorization token, respectively.
+ *
+ * @param {string} url - The URL endpoint to which the PUT request is sent. This URL should be the API endpoint for updating the user's profile.
+ * @param {Object} userData - An object containing the user's profile data that needs to be updated. The structure of this object depends on the server's expected payload for the profile update.
+ *
+ * @returns {Promise<void>} A promise that resolves with no value if the update is successful or rejects with an error if the update fails.
+ *
+ * */
+
 export async function updateUserProfile(url, userData) {
     try {
         const authToken = getAuthToken();
@@ -31,6 +43,15 @@ export async function updateUserProfile(url, userData) {
     }
 }
 
+/**
+ * Initializes media-related functionality for a user profile. This function fetches
+ * the user's media data, updates the profile container, avatar, and banner based on the fetched data,
+ * and sets up event listeners for saving changes and closing the media editor.
+ *
+ * @param {Object} mediaRes - The initial media data passed to the function.
+ *
+ * mediaInUse();
+ */
 export async function mediaInUse(mediaRes) {
     try {
         const mediaRes = await dofetch(`${PROFILE_URL}/${userName}`, true);

@@ -7,7 +7,6 @@ export const POSTS_URL = `${BASE_URL}/social/posts`;
 export const PROFILE_URL = `${BASE_URL}/social/profiles`;
 export const postLike = document.getElementById(".post-like");
 export const postDiv = document.querySelector("#posts");
-export const PUBLISH_URL = `${BASE_URL}/social/posts`;
 export const publishForm = document.getElementById("publishForm");
 export const invalidInput = document.querySelectorAll(".invalid-input");
 export const whatWrong = document.querySelector(".login-error");
@@ -29,3 +28,7 @@ export const gameImages = {
     GTA: "../../assets/g/GTA.svg",
     clear: "",
 };
+export const addImgButton = document.getElementById("imgainput");
+export const titleElement = document.getElementById("title");
+export const bodyElement = document.getElementById("validationTooltip1");
+export const imageToPost = document.getElementById("impToPost");

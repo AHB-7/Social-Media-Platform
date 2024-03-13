@@ -34,7 +34,7 @@ export async function logInUser(email, password) {
         wrongInfo(whatWrong, `Every Thing Look Good`, "green");
         addAuthToken(accessToken);
         setTimeout(() => {
-            window.location.href = "/html/feed.html";
+            window.location.href = "/html/Profile/profile.html";
         }, 1000);
     } else {
         toggleInvalidInputs(invalidInput, true);

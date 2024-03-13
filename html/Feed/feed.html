@@ -4,13 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="../dist/css/index.css" />
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="../../dist/css/index.css" />
         <script
             src="https://kit.fontawesome.com/c4f6dc2483.js"
             crossorigin="anonymous"
         ></script>
-        <script type="module" src="../js/postes/postes.mjs"></script>
+        <script type="module" src="./index.mjs"></script>
     </head>
     <body class="m-0 p-0 bg-dark" data-bs-theme="dark">
         <header>
@@ -18,10 +17,10 @@
                 <div class="container">
                     <a
                         class="navbar-brand me-auto d-md-none"
-                        href="../index.html"
+                        href="./feed.html"
                     >
                         <img
-                            src="../assets/logo.svg"
+                            src="../../assets/logo.svg"
                             alt="logo Image"
                             style="height: 2rem"
                         />
@@ -63,10 +62,10 @@
                         </form>
                         <a
                             class="navbar-brand mx-auto d-none d-md-inline-block"
-                            href="../index.html"
+                            href="../Feed/feed.html"
                         >
                             <img
-                                src="../assets/logo.svg"
+                                src="../../assets/logo.svg"
                                 alt="logo Image"
                                 style="height: 2rem"
                             />
@@ -95,7 +94,7 @@
                             </li>
                             <li class="nav-item position-relative">
                                 <a
-                                    href="./profile.html"
+                                    href="../Profile/profile.html"
                                     class="p-0 m-0 link-brand"
                                     ><i
                                         class="fa-solid fa-user rounded-circle nav-icons link-icon auto py-1 pt-1 text-light"
@@ -109,7 +108,7 @@
                             </li>
                             <li class="nav-item z-1 position-relative">
                                 <a
-                                    href="./profile.html"
+                                    href="../Profile/profile.html"
                                     class="p-0 m-0 link-brand"
                                     ><i
                                         class="fa-solid fa-envelope-open rounded-circle nav-icons link-icon auto py-1 pt-1 text-light"
@@ -155,7 +154,7 @@
                                     <li>
                                         <a
                                             class="dropdown-item text-danger"
-                                            href="../index.html"
+                                            href="../../index.html"
                                             >Log Out</a
                                         >
                                     </li>
@@ -406,7 +405,7 @@
                                                 class="d-flex align-items-center justify-content-center"
                                             >
                                                 <img
-                                                    src="../assets/g/GTA.svg"
+                                                    src="../../assets/g/GTA.svg"
                                                     alt="game Image"
                                                     height="30"
                                                 />
@@ -429,7 +428,7 @@
                                                 class="d-flex align-items-center justify-content-center"
                                             >
                                                 <img
-                                                    src="../assets/g/counter_strike_image.svg"
+                                                    src="../../assets/g/counter_strike_image.svg"
                                                     alt="game Image"
                                                     height="30"
                                                 />
@@ -451,7 +450,7 @@
                                                 class="d-flex align-items-center justify-content-center"
                                             >
                                                 <img
-                                                    src="../assets/g/Fortnite.svg"
+                                                    src="../../assets/g/Fortnite.svg"
                                                     alt="game Image"
                                                     height="30"
                                                 />
@@ -470,10 +469,11 @@
                     <form
                         class="pt-md-0 needs-validation mb-3"
                         id="publishForm"
+                        novalidate
                     >
                         <div class="form-floating">
                             <input
-                                class="form-control bg-dark bg-avtive-glassy text-white mt-2 fs-3 text-decoration-underline"
+                                class="form-control bg-dark bg-avtive-glassy text-white mt-2 fs-3"
                                 placeholder="Title"
                                 style="height: auto"
                                 maxlength="230"
@@ -481,32 +481,49 @@
                                 id="title"
                                 required
                             />
-                            <label for="title ">Title</label>
+                            <label for="title ">Title:</label>
                             <div
                                 class="invalid-tooltip top-0 mt-4 mt-md-2 end-0"
                             >
-                                Please write something!!
+                                Title must be included!
                             </div>
                         </div>
-                        <div class="form-floating">
+                        <div class="">
                             <textarea
-                                class="form-control bg-dark bg-avtive-glassy border-top-0 text-white py-0 ps-4"
-                                placeholder="Write Something..."
+                                class="form-control bg-dark bg-avtive-glassy border-top-0 text-white py-0 ps-3"
+                                placeholder="Waht in you mind"
                                 style="height: auto"
                                 contenteditable="true"
                                 maxlength="360"
                                 minlength="1"
                                 id="validationTooltip1"
-                                required
                             ></textarea>
-                            <label
-                                for="validationTooltip1 visually-hidden"
-                            ></label>
-                            <div
-                                class="invalid-tooltip top-0 mt-4 mt-md-2 end-0"
-                            >
-                                There must be a content here!
+                            <label for="validationTooltip1 visually-hidden">
+                            </label>
+                        </div>
+                        <div
+                            class="collapse"
+                            id="imgainputCollapse"
+                            style="max-width: 60rem; left: 0; bottom: 2.5rem"
+                        >
+                            <div>
+                                <img
+                                    id="impToPost"
+                                    class="d-none w-100"
+                                    src=""
+                                    alt="Post Image"
+                                />
                             </div>
+                            <input
+                                type="text"
+                                class="form-control bg-body-secondary"
+                                style="
+                                    max-width: 60rem;
+                                    left: 0;
+                                    bottom: 2.5rem;
+                                "
+                                id="imgainput"
+                            />
                         </div>
                         <div
                             class="btn-group bottom-0 w-100 bg-glassy"
@@ -520,7 +537,7 @@
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#imgainputCollapse"
-                                aria-expanded="false"
+                                aria-expanded="true"
                                 aria-controls="imgainputCollapse"
                             >
                                 <i class="fa-solid fa-image"></i>
@@ -528,16 +545,7 @@
                                     >Image</span
                                 >
                             </button>
-                            <div
-                                class="collapse position-relative"
-                                id="imgainputCollapse"
-                            >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="imgainput"
-                                />
-                            </div>
+
                             <div class="dropdown">
                                 <button
                                     type="button"
@@ -582,7 +590,6 @@
                             </div>
 
                             <button
-                                id="controlBtn01"
                                 type="submit"
                                 class="btn btn-blenden d-flex align-items-center justify-content-center gap-2"
                             >
@@ -597,6 +604,5 @@
                 </section>
             </section>
         </main>
-        <footer></footer>
     </body>
 </html>

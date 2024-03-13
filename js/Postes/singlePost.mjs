@@ -5,7 +5,7 @@ export function tagImg(post) {
 }
 export function checkIfTag(post) {
     if (`${tagImg(post)}` === "") {
-        return ``
+        return ``;
     } else {
         return `  
         <img

@@ -14,7 +14,7 @@ export function getSelectedGender() {
     } else if (genderOther) {
         return "other";
     } else {
-        return null;
+        return;
     }
 }
 
@@ -24,7 +24,7 @@ export function aggrement() {
     if (isAgreed) {
         return "Aggred";
     } else {
-        return null;
+        return;
     }
 }
 export function checkNumber() {
@@ -32,7 +32,7 @@ export function checkNumber() {
     if (/^\d+$/.test(phoneNumber)) {
         return phoneNumber;
     } else {
-        return null;
+        return;
     }
 }
 
